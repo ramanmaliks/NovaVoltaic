@@ -98,10 +98,11 @@ at chrome browser visit `http://localhost:4200/`. From here you can surf the **S
  4. Select `POST` method.
 
  5. for eg. if you have a user whose username is admin and passowrd is root, so in **body** section select json format and write the following
- ```{ 
+ { 
      "username":"admin",
      "password":"root"
- }
+ } 
+ 
  6. After send in Repsonse you will get token, copy it.
 
  7. to view all message in response box , so goto `http://localhost:8080/message/all`
@@ -119,22 +120,26 @@ at chrome browser visit `http://localhost:4200/`. From here you can surf the **S
 
 # Setting up STS Project
 1. Add the following dependecies in pom.xml
-```1. spring-boot-starter-data-jpa <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+```
+1. spring-boot-starter-data-jpa <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
 2. spring-boot-starter-web <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 3. mysql-connector-java <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 4. spring-boot-starter-security <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
 5. jjwt <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt --> 
-6. jaxb-api<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->```
+6. jaxb-api<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+```
 
 2. Add these in Application.properties file
-```server.port = 8080
+```
+server.port = 8080
 server.servlet.context-path=/message
 
 spring.datasource.url=jdbc:mysql://localhost:3306/soviet
 spring.datasource.username=root
 spring.datasource.password=root
 
-spring.jpa.hibernate.ddl-auto=update```
+spring.jpa.hibernate.ddl-auto=update
+```
 
 
 # Adding Components , service, module, class in Angular CLI v.13
