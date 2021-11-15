@@ -98,7 +98,7 @@ at chrome browser visit `http://localhost:4200/`. From here you can surf the **S
  4. Select `POST` method.
 
  5. for eg. if you have a user whose username is admin and passowrd is root, so in **body** section select json format and write the following
- ```{ 
+ ``` { 
      "username":"admin",
      "password":"root"
  } ```
