@@ -130,14 +130,16 @@ at chrome browser visit `http://localhost:4200/`. From here you can surf the **S
 ```
 
 2. Add these in Application.properties file
-```server.port = 8080
+```
+server.port = 8080
 server.servlet.context-path=/message
 
 spring.datasource.url=jdbc:mysql://localhost:3306/soviet
 spring.datasource.username=root
 spring.datasource.password=root
 
-spring.jpa.hibernate.ddl-auto=update```
+spring.jpa.hibernate.ddl-auto=update
+```
 
 
 # Adding Components , service, module, class in Angular CLI v.13
