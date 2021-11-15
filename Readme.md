@@ -120,12 +120,14 @@ at chrome browser visit `http://localhost:4200/`. From here you can surf the **S
 
 # Setting up STS Project
 1. Add the following dependecies in pom.xml
-```1. spring-boot-starter-data-jpa <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
+```
+1. spring-boot-starter-data-jpa <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-jpa -->
 2. spring-boot-starter-web <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web -->
 3. mysql-connector-java <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 4. spring-boot-starter-security <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security -->
 5. jjwt <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt --> 
-6. jaxb-api<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->```
+6. jaxb-api<!-- https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api -->
+```
 
 2. Add these in Application.properties file
 ```server.port = 8080
