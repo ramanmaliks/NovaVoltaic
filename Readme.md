@@ -101,7 +101,7 @@ at chrome browser visit `http://localhost:4200/`. From here you can surf the **S
  ```{ 
      "username":"admin",
      "password":"root"
- }
+ }```
  6. After send in Repsonse you will get token, copy it.
 
  7. to view all message in response box , so goto `http://localhost:8080/message/all`
