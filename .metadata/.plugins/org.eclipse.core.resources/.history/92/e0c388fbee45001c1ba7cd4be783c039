@@ -1,0 +1,5 @@
+package com.novavoltic.entity;
+
+public class User {
+
+}

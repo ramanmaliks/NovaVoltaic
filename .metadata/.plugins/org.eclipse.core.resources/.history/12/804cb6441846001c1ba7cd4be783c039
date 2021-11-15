@@ -1,0 +1,58 @@
+package com.novavoltic.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.DisabledException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.novavoltic.config.JwtUtil;
+import com.novavoltic.service.JwtRequest;
+import com.novavoltic.service.UserDetailsServiceImpl;
+
+@RestController
+public class AuthenticationController {
+	@Autowired
+	private AuthenticationManager authenticationManager;
+	@Autowired
+	private UserDetailsServiceImpl userDetailService;
+	@Autowired
+	private JwtUtil jwtUtils;
+	
+	// generate token
+	@PostMapping("/generate-token")
+	
+	public ResponseEntity<?> generateToken(RequestBody JwtRequest jwtRequest) 
+	{
+	try{
+	authenticate(jwtRequest.getUsername(),jwtRequest.getPassword());
+
+	}catch(UserNotFoundException e){
+	e.printStackTrace(e);
+	throw new Exception("User not found");
+	}
+	
+	//  authenticated user
+	UserDetails userDetails = this.userDetailsServiec.loadUserByUsername(jwtRequest.getUserName(jwtRequest.geUserName()));
+	String token = this.jwtUtils.generateToken(userDetails);
+	return ResponseEntity.ok(new JwtResponse(token));
+	}
+
+	private void authenticate(String username, String password)
+	{
+	try{
+		authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username,password));
+
+		}catch(DisabledException e)
+		{ 
+			throw new Exception("User Disabled"); 
+		}catch( BadCredentialsException e) 
+		{
+			throw new Exception ("Invalid Credentials" + e.getMessage());
+		}
+	}
+}

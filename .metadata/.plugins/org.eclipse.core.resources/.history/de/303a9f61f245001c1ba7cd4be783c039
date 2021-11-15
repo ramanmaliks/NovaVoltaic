@@ -1,0 +1,8 @@
+package com.novavoltic.service;
+
+public interface UserService {
+
+	//creating user
+	public User createUser(User user);
+	
+}

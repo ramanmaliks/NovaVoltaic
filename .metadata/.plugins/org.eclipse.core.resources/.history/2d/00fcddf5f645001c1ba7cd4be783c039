@@ -1,0 +1,5 @@
+package com.novavoltic.controller;
+
+public class UserController {
+
+}

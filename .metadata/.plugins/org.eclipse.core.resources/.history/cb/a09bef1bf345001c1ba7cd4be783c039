@@ -1,0 +1,21 @@
+package com.novavoltic.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.novavoltic.dao.UserRepository;
+import com.novavoltic.entity.User;
+
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepository userRepo;
+	
+	@Override
+	public User createUser(User user) {
+		
+		this.userRepo.findByUserName(user.getUsername());
+		return null;
+	}
+
+	
+}

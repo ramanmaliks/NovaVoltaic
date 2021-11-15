@@ -1,0 +1,6 @@
+package com.novavoltic.service;
+
+public class JwtResponse {
+String token;
+
+}

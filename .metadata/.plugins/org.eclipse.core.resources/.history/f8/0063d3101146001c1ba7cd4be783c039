@@ -1,0 +1,8 @@
+package com.novavoltic.service;
+
+public class JwtRequest {
+String username;
+String password;
+
+
+}

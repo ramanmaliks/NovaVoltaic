@@ -1,0 +1,38 @@
+package com.novavoltic.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.novavoltic.entity.Message;
+import com.novavoltic.service.MessageService;
+
+@RestController
+public class MainController {
+	
+	@Autowired
+	MessageService messageService;
+	
+	@GetMapping("")
+	public String ViewHomePage() {
+		return "this is homepage";
+	}
+	
+	//get the message list
+	@GetMapping("/all")
+	public  List<Message> getMessages(){
+		
+		return this.messageService.getMessages();
+		
+	}
+	
+	@PostMapping("/add")
+	public Message addMessage(@RequestBody Message message){
+		
+		return this.messageService.addMessage(message);
+	}
+}
