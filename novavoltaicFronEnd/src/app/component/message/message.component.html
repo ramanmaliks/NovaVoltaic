@@ -1,0 +1,23 @@
+<div class="container ">
+
+    <div class="card">
+        <form (ngSubmit)="doSubmitForm()">
+        <h1> SOVIET RESISTANCE NETWORKS </h1>
+           <mat-form-field class="field" appearance="fill">
+            <mat-label>Date and Time  </mat-label>
+            <input matInput name="date" type="text" [(ngModel)]="data.date" disabled >
+          </mat-form-field>
+
+            <mat-form-field class="field" appearance="fill" >
+            <mat-label>Enter Your Message </mat-label>
+            <textarea name="message" [(ngModel)]="data.message"rows="5" matInput placeholder="Enter your message"></textarea>
+          </mat-form-field>
+    
+        <div class="text-center">         
+            <button type="submit" mat-raised-button color="primary">Submit</button>
+            <a routerLink="/message" mat-raised-button color="primary" (click)="btnClick()">Clear</a>
+        </div>
+        </form>
+    </div>
+    
+</div>

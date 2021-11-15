@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="card">
+        <form (ngSubmit)="doSubmitForm()">
+            <h1>SOVIET RESISTANCE NETWORKS </h1>
+            <mat-form-field class="field" appearance="fill">
+                <mat-label>User Name</mat-label>
+                <input matInput name="username" type="email" [(ngModel)]="data.username" required placeholder="Enter Your UserName ">
+              </mat-form-field>
+            <mat-form-field class="field" appearance="fill" >
+                <mat-label>Password </mat-label>
+                <input matInput name="password" type="password" [(ngModel)]="data.password" required placeholder="Enter Password">
+            </mat-form-field>       
+            <div class="text-center">                
+                <button type="submit" mat-raised-button color="primary">LOGIN</button>                
+            </div>
+            </form>
+    </div>
+</div>

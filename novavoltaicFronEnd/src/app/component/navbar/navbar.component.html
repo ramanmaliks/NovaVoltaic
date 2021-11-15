@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Soviet" routerLink="/">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Soviet War Message App</span>
+    
+      <span class="example-spacer"></span>
+      <h3 *ngIf="backend.isLoggedIn()" class="example-icon"> {{ backend.getUser().username }} </h3> 
+    <button *ngIf="!backend.isLoggedIn()"
+    mat-icon-button class="example-icon favorite" aria-label="Login" routerLink="/login">
+    Login&nbsp;&nbsp;&nbsp;</button>
+    <button *ngIf="backend.isLoggedIn()"
+    mat-icon-button class="example-icon favorite" (click)="logout()" aria-label="Login" routerLink="/login">
+    Logout&nbsp;&nbsp;&nbsp;</button>
+    <button mat-icon-button class="example-icon favorite" aria-label="Register" routerLink="/register">
+      Register</button>
+</mat-toolbar>
+

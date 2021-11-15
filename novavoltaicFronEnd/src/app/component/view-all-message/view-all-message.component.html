@@ -1,0 +1,20 @@
+ 
+ <div class="card">
+ <mat-card *ngFor="let q of messagesObj | paginate: { itemsPerPage: count, currentPage: p }">
+        <mat-card-header>
+            <mat-card-title> 
+                {{ q.name }} 
+            </mat-card-title>
+            <mat-card-subtitle>
+                {{ q.date }}
+            </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="text-center">
+            <h1><b> {{q.message}} </b></h1>
+        </mat-card-content>
+        
+    </mat-card> 
+    <div class="text-center">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div> 
+</div>    
