@@ -86,7 +86,7 @@ at chrome browser visit `http://localhost:4200/`. From here you can surf the **S
  2. enter password as root
 
  3. to create database in mysql by writing following command.
- ``` create database soviet ```
+ ``` create database soviet; ```
  
  # Using Postman
  1. To check API using postman.
