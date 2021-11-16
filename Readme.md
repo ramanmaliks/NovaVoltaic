@@ -135,8 +135,8 @@ server.port = 8080
 server.servlet.context-path=/message
 
 spring.datasource.url=jdbc:mysql://localhost:3306/soviet
-spring.datasource.username=root
-spring.datasource.password=root
+spring.datasource.username=<username>
+spring.datasource.password=<password>
 
 spring.jpa.hibernate.ddl-auto=update
 ```
