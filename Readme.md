@@ -147,7 +147,9 @@ Way to add Angular Material io
 material.angular.io
 c:\<project folder> ng add @angular/material
 1.API reference for Angular Material button
+```
 import {MatButtonModule} from '@angular/material/button';
+```
 
 2.API reference for Angular Material snack-bar
 import {MatSnackBarModule} from '@angular/material/snack-bar';
