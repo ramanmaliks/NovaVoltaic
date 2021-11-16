@@ -144,38 +144,51 @@ spring.jpa.hibernate.ddl-auto=update
 
 # Adding Components , service, module, class in Angular CLI v.13
 Way to add Angular Material io
+
 material.angular.io
+```
 c:\<project folder> ng add @angular/material
+```
 1.API reference for Angular Material button
 ```
 import {MatButtonModule} from '@angular/material/button';
 ```
-
 2.API reference for Angular Material snack-bar
+```
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-
+```
 3. API reference for Angular Material toolbar
+```
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+```
 4. API reference for Angular Material icon
+```
 import {MatIconModule} from '@angular/material/icon';
-
+```
 5. API reference for Angular Material form-field
+```
 import {MatFormFieldModule} from '@angular/material/form-field';
-
+```
 6. API reference for Angular Material input
+```
 import {MatInputModule} from '@angular/material/input';
-
+```
 7. forms in Angular
+```
 import { FormsModule } from '@angular/forms';
-
+```
 8.Communicating with backend services using HTTP
+```
 import { HttpClientModule } from '@angular/common/http';
-
+```
 9.API reference for Angular Material card
+```
 import {MatCardModule} from '@angular/material/card';
-
+```
 10.Pagination for Angular
+```
 npm install ngx-pagination --save
+
 import { NgxPaginationModule } from 'ngx-pagination';
+```
 "# NovaVoltaic" 
